@@ -1,0 +1,18 @@
+.card {
+    background-color: rgb(206, 204, 204);
+    width: 80%;
+    min-width: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 80px;
+    border-radius: 20px;
+    font-size: large;
+    text-align: start;
+  }
+  
+  .text {
+    width: 80%;
+    min-width: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+  }

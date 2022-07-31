@@ -1,0 +1,67 @@
+// the following are test cases for our REST API
+// test cases begin with a HTTP verb
+// they are separated by a '###'
+
+// test cases for /users/ endpoint
+// to run patch or delete, copy the id from the get request and paste at the end of the url
+GET http://localhost:9090/users/
+
+###
+
+GET http://localhost:9090/users/62e3048546c261ccd9580cb8
+
+###
+
+POST http://localhost:9090/users/
+Content-Type: application/json
+
+{
+    "name": "buyer",
+    "password": "buyer",
+    "role": "buyer"
+}
+
+###
+
+PATCH http://localhost:9090/users/62e306cb478cf36040664357
+Content-Type: application/json
+
+{
+    "password": "password"
+}
+
+###
+
+DELETE http://localhost:9090/users/62e306cb478cf36040664357
+
+###
+
+// test cases for /teas/
+GET http://localhost:9090/teas
+
+###
+
+GET http://localhost:9090/teas/62e3091867f03285efc7e720
+
+###
+
+POST http://localhost:9090/teas/
+Content-Type: application/json
+
+{
+    "farmer": "62e3048546c261ccd9580cb8",
+    "quantity": 12
+}
+
+###
+
+PATCH http://localhost:9090/teas/62e3095b67f03285efc7e730
+Content-Type: application/json
+
+{
+    "price": "500"
+}
+
+###
+
+DELETE http://localhost:9090/teas/62e3091867f03285efc7e720
